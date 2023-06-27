@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ForecastCard() {
+function ForecastCards() {
   return (
     <div>
         
@@ -8,4 +8,4 @@ function ForecastCard() {
   )
 }
 
-export default ForecastCard
+export default ForecastCards
