@@ -1,6 +1,7 @@
-import React from 'react'
+import {useContext} from 'react'
+import RegionContext from './RegionContext';
 
-const handleChange = (e) => {
+const changeSelectorColor = (e) => {
   let regionSelector = e.target;
   if (e.target.value != 'null') {
     regionSelector.style = {color: "black"}
@@ -10,6 +11,8 @@ const handleChange = (e) => {
 }
 
 function Form() {
+  const {region, setRegion} = useContext(RegionContext);
+
   return (
     <form>
       <select 
@@ -17,15 +20,18 @@ function Form() {
       id='regionSelector' 
       name="region" 
       defaultValue='default' 
-      onChange={handleChange}
+      onChange={(e) => {
+        setRegion(e.target.value);
+        changeSelectorColor(e);
+      }}
       >
         <option disabled="disabled" value='default'>Select a region</option>
         <option value="istanbul">Istanbul</option>
-        <option value="Rome">Rome</option>
-        <option value="New-York">New York</option>
-        <option value="Tokyo">Tokyo</option>
-        <option value="Paris">Paris</option>
-        <option value="Berlin">Berlin</option>
+        <option value="rome">Rome</option>
+        <option value="new-york">New York</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="paris">Paris</option>
+        <option value="berlin">Berlin</option>
       </select>
     </form>
   )
