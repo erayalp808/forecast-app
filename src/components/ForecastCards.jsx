@@ -1,10 +1,16 @@
 import {useContext, useState, useEffect} from 'react'
 import RegionContext from './RegionContext'
 
-const getDayName = () => {
-  const date = new Date();
+const date = new Date();
+const currentDay = date.getDay();
 
-  switch (date.getDay()) {
+const getDayName = (day) => {
+
+  if (day > 6) {
+    day = Math.abs(day - 7)
+  }
+
+  switch (day) {
     case 0:
       return "Sun"
       break;
@@ -64,12 +70,14 @@ function ForecastCards() {
     <div className='forecast-cards'>
       {(isLoading && (region !== "default")) && <h1>Loading...</h1>}
       {!isLoading && weather.map((item, index) =>(
-        <div key={index} className={(index === 0) ? "first-card" : "card"}>
-          <div className='day-name'>{getDayName()}</div>
+        <div key={index} className={(index === 0) ? "first-card card" : "card"}>
+          <div className='day-name'>{getDayName(currentDay + index)}</div>
           <img className='icon' src={item.condition.icon}></img>
           <div className='condition'>{item.condition.text}</div>
-          <div className='max-temp'>{item.maxtemp_c}</div>
-          <div className='min-temp'>{item.mintemp_c}</div>
+          <div className='temps'>
+            <div className='max-temp'>{item.maxtemp_c}</div>
+            <div className='min-temp'>{item.mintemp_c}</div>
+          </div>
         </div>
       ))}
     </div>
