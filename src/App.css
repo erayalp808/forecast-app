@@ -33,7 +33,7 @@ body {
 
 h1 {
   font-family: 'Poppins', sans-serif;
-  color: purple;
+  color: rgba(210, 12, 12, 0.612);
 }
 
 .forecast-cards {
