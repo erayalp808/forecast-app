@@ -14,7 +14,7 @@ function Form() {
   const {region, setRegion} = useContext(RegionContext);
 
   return (
-    <form>
+    <form className='form'>
       <select 
       style={{color: "grey"}} 
       id='regionSelector' 
