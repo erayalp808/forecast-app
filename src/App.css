@@ -1,18 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #regionSelector {
   font-family: 'Poppins', sans-serif;
-  padding: 5px;
-  font-size:medium;
+  padding: 10px;
+  font-size: larger;
   font-weight: bold;
   border-radius: 10px;
   appearance: none;
-  width: 10rem;
+  width: 12rem;
+  margin-left: 3%;
 } 
 
 #regionSelector:hover {
-  border: 2px solid purple;
-  -webkit-box-shadow: 4px 4px 39px -14px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 4px 4px 39px -14px rgba(0, 0, 0, 1);
-  box-shadow: 4px 4px 39px -14px rgba(0,0,0,1);
+  border: 2px solid rgba(119, 7, 7, 0.897);
+  -webkit-box-shadow: 4px 4px 39px -10px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 4px 4px 39px -10px rgba(0, 0, 0, 1);
+  box-shadow: 4px 4px 39px -10px rgba(0,0,0,1);
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  background-color: rgba(210, 12, 12, 0.612);
+  margin-bottom: 1%;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  color: purple;
+}
+
+.forecast-cards {
+  display: flex;
+  margin-left: 3%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-right: 1rem;
+  min-width: 161px;
+  max-height: 280px;
+}
+
+.day-name, .condition {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: rgb(96, 96, 96);
+  align-self: center;
+  text-align: center;
+}
+
+.condition {
+  margin-bottom: 10%;
+}
+
+.temps {
+  display: flex;
+  margin-top: auto;
+}
+
+.max-temp, .min-temp {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: rgb(96, 96, 96);
+  text-align: center;
+  width: 50%;
+}
+
+.min-temp {
+  color: rgb(164, 164, 164);
+}
+
+.icon {
+  max-width: 200px;
 }
