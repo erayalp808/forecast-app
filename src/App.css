@@ -6,6 +6,8 @@
   font-size:medium;
   font-weight: bold;
   border-radius: 10px;
+  appearance: none;
+  width: 10rem;
 } 
 
 #regionSelector:hover {
