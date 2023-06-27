@@ -15,8 +15,7 @@ function Form() {
 
   return (
     <form className='form'>
-      <select 
-      className='dropdown'
+      <select
       style={{color: "grey"}} 
       id='regionSelector' 
       name="region" 
