@@ -19,13 +19,13 @@ function Form() {
       style={{color: "grey"}} 
       id='regionSelector' 
       name="region" 
-      defaultValue='default' 
+      defaultValue='' 
       onChange={(e) => {
         setRegion(e.target.value);
         changeSelectorColor(e);
       }}
       >
-        <option disabled="disabled" value='default'>Select a region</option>
+        <option disabled="disabled" value=''>Select a region</option>
         <option value="istanbul">Istanbul</option>
         <option value="rome">Rome</option>
         <option value="new-york">New York</option>
