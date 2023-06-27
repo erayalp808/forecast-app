@@ -68,6 +68,7 @@ function ForecastCards() {
 
   return (
     <div className='forecast-cards'>
+      {(region == "default") && <h1>Select a region to see weather forecast!</h1>}
       {(isLoading && (region !== "default")) && <h1>Loading...</h1>}
       {!isLoading && weather.map((item, index) =>(
         <div key={index} className={(index === 0) ? "first-card card" : "card"}>
